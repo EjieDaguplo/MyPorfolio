@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Header />
       <HeroSection />
-      <section className="py-12 px-6 bg-gray-800">
+      <section id="projects" className="py-12 px-6 bg-gray-800">
         <h2 className="text-3xl font-bold mb-6 text-white">Projects</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {projects.map((proj, i) => (
@@ -19,7 +19,10 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="py-12 px-6 bg-gray-800 mt-4 text-white">
+      <section
+        id="certificate"
+        className="py-12 px-6 bg-gray-800 mt-4 text-white"
+      >
         <h2 className="text-3xl font-bold mb-6 text-white">Certificate</h2>
         <div className="flex flex-wrap gap-6 justify-center">
           {certificate.map((cert, index) => (

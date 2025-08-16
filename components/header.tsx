@@ -16,17 +16,17 @@ function Header() {
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex space-x-6">
-        <Link href="/" className={navLinkClass}>
+        <Link href="#hero" className={navLinkClass}>
           Home
         </Link>
-        <Link href="/about" className={navLinkClass}>
+        <a href="#projects" className={navLinkClass}>
           Projects
-        </Link>
-        <Link href="/projects" className={navLinkClass}>
+        </a>
+        <Link href="#certificate" className={navLinkClass}>
           Certificate
         </Link>
-        <Link href="/contact" className={navLinkClass}>
-          About
+        <Link href="#contact" className={navLinkClass}>
+          Contact
         </Link>
       </nav>
 
@@ -47,32 +47,32 @@ function Header() {
              flex flex-col space-y-4 md:hidden z-50r flex-col items-center"
         >
           <Link
-            href="/"
+            href="#hero"
             className={navLinkClass}
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
-            href="/about"
+            href="#projects"
             className={navLinkClass}
             onClick={() => setIsOpen(false)}
           >
             Projects
           </Link>
-          <Link
-            href="/projects"
+          <a
+            href="#certificate"
             className={navLinkClass}
             onClick={() => setIsOpen(false)}
           >
             Certificate
-          </Link>
+          </a>
           <Link
-            href="/contact"
+            href="#contact"
             className={navLinkClass}
             onClick={() => setIsOpen(false)}
           >
-            About
+            Contact
           </Link>
         </div>
       )}
