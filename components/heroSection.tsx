@@ -4,7 +4,9 @@ function HeroSection() {
       <h2 className="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Ejie</h2>
       <p className="max-w-xl md:text-lg mb-6 text-sm">
         A passionate web developer building functional web apps. I also develop
-        native and cross-platform mobile applications.
+        native and cross-platform mobile applications. Additionally, I have
+        experience in developing and integrating machine learning models into
+        applications.
       </p>
       <a
         href="resume.pdf"
