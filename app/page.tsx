@@ -23,7 +23,7 @@ export default function Home() {
         id="certificate"
         className="py-12 px-6 bg-gray-800 mt-4 text-white"
       >
-        <h2 className="text-3xl font-bold mb-6 text-white">Certificate</h2>
+        <h2 className="text-3xl font-bold mb-6 text-white">Certificates</h2>
         <div className="flex flex-wrap gap-6 justify-center">
           {certificate.map((cert, index) => (
             <div
