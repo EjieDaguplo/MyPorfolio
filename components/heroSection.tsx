@@ -12,7 +12,7 @@ function HeroSection() {
         applications.
       </p>
       <a
-        href="resume&application_letter.pdf"
+        href="resume&appLetter.pdf"
         className="bg-gray-600 hover:bg-gray-900 text-white px-6 py-3 rounded-lg"
         download
       >
