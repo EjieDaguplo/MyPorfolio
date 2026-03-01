@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react"; // icons
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +12,21 @@ function Header() {
 
   return (
     <header className="flex justify-between items-center py-6 px-4 bg-gray-900 text-white relative">
-      {/* Left side (could be logo/brand later) */}
-      <h1 className="text-2xl font-bold ml-4 animate-bounce">EOD</h1>
+      {/* Left side - Logo + Photo on md+ */}
+      <div className="flex items-center gap-3 ml-4">
+        {/* Photo - only visible on md and above */}
+        <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30 shrink-0">
+          <Image
+            src="/MyFace.jpg"
+            alt="Profile"
+            width={40}
+            height={40}
+            className="object-cover w-full h-full"
+          />
+        </div>
+
+        <h1 className="text-2xl font-bold animate-bounce">EOD</h1>
+      </div>
 
       {/* Desktop Menu */}
       <nav className="hidden md:flex space-x-6">
@@ -43,35 +57,19 @@ function Header() {
         <div
           className="absolute top-full left-1/2 transform -translate-x-1/2 
              w-3/4 bg-gray-800/40 backdrop-blur-md border border-white/20
-             mt-2 p-4 rounded-2xl w-full shadow-lg 
-             flex flex-col space-y-4 md:hidden z-50r flex-col items-center"
+             mt-2 p-4 rounded-2xl shadow-lg 
+             flex flex-col space-y-4 md:hidden z-50 items-center"
         >
-          <Link
-            href="#hero"
-            className={navLinkClass}
-            onClick={() => setIsOpen(false)}
-          >
+          <Link href="#hero" className={navLinkClass} onClick={() => setIsOpen(false)}>
             Home
           </Link>
-          <Link
-            href="#projects"
-            className={navLinkClass}
-            onClick={() => setIsOpen(false)}
-          >
+          <Link href="#projects" className={navLinkClass} onClick={() => setIsOpen(false)}>
             Projects
           </Link>
-          <a
-            href="#certificate"
-            className={navLinkClass}
-            onClick={() => setIsOpen(false)}
-          >
+          <a href="#certificate" className={navLinkClass} onClick={() => setIsOpen(false)}>
             Certificate
           </a>
-          <Link
-            href="#contact"
-            className={navLinkClass}
-            onClick={() => setIsOpen(false)}
-          >
+          <Link href="#contact" className={navLinkClass} onClick={() => setIsOpen(false)}>
             Contact
           </Link>
         </div>

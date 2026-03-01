@@ -8,45 +8,85 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-gray-900 text-gray-300 py-8 mt-6">
-      <div className="max-w-6xl mx-auto px-4">
-        <div>
-          <h3 className="text-lg font-semibold mb-3 text-white">Contact Me</h3>
-          <div className="grid grid-cols-2 gap-4 text-sm">
+    <footer
+      id="contact"
+      className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300 py-12 mt-6 border-t border-white/10"
+    >
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex flex-col items-center text-center gap-6">
+          <span className="inline-block px-4 py-1 text-xs font-semibold tracking-widest uppercase rounded-full bg-white/10 border border-white/20 text-blue-300">
+            Get in Touch
+          </span>
+
+          <h3 className="text-2xl font-extrabold text-white">
+            Contact{" "}
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Me
+            </span>
+          </h3>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-2xl">
             <a
               href="https://github.com/EjieDaguplo"
               target="_blank"
-              className="flex items-center space-x-2 hover:text-white transition-colors"
+              className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-purple-400/40 transition-all group"
             >
-              <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />
-              <span>GitHub</span>
+              <FontAwesomeIcon
+                icon={faGithub}
+                className="w-6 h-6 group-hover:text-purple-400 transition-colors"
+              />
+              <span className="text-xs text-gray-400 group-hover:text-white transition-colors">
+                GitHub
+              </span>
             </a>
+
             <a
               href="https://web.facebook.com/ejie.daguplo.9"
               target="_blank"
-              className="flex items-center space-x-2 hover:text-white transition-colors"
+              className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-blue-400/40 transition-all group"
             >
-              <FontAwesomeIcon icon={faFacebook} className="w-5 h-5" />
-              <span>Facebook</span>
+              <FontAwesomeIcon
+                icon={faFacebook}
+                className="w-6 h-6 group-hover:text-blue-400 transition-colors"
+              />
+              <span className="text-xs text-gray-400 group-hover:text-white transition-colors">
+                Facebook
+              </span>
             </a>
+
             <a
               href="mailto:ejiedaguplo@gmail.com"
               target="_blank"
-              className="flex items-center space-x-2 hover:text-white transition-colors"
+              className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-pink-400/40 transition-all group"
             >
-              <FontAwesomeIcon icon={faGoogle} className="w-5 h-5" />
-              <span>Gmail</span>
+              <FontAwesomeIcon
+                icon={faGoogle}
+                className="w-6 h-6 group-hover:text-pink-400 transition-colors"
+              />
+              <span className="text-xs text-gray-400 group-hover:text-white transition-colors">
+                Gmail
+              </span>
             </a>
-            <span className="flex items-center space-x-2 hover:text-white transition-colors gap-2">
-              <FontAwesomeIcon icon={faPhone} className="w-5 h-5" />
-              +63 946 233 4179
-            </span>
+
+            <div className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-green-400/40 transition-all group cursor-default">
+              <FontAwesomeIcon
+                icon={faPhone}
+                className="w-6 h-6 group-hover:text-green-400 transition-colors"
+              />
+              <span className="text-xs text-gray-400 group-hover:text-white transition-colors">
+                +63 946 233 4179
+              </span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="text-center text-gray-500 text-sm mt-6 border-t border-gray-700 pt-4">
-        © {new Date().getFullYear()} Ejie Daguplo. All rights reserved.
+      <div className="text-center text-gray-500 text-xs mt-10 border-t border-white/10 pt-6 px-4">
+        © {new Date().getFullYear()}{" "}
+        <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent font-semibold">
+          Ejie Daguplo
+        </span>
+        . All rights reserved.
       </div>
     </footer>
   );
