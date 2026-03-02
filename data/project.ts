@@ -20,4 +20,12 @@ export const projects = [
     img: "evaluationapp.png",
     link: "https://github.com/ejie/gradewise",
   },
+    {
+    title: "InsuredRiceScan",
+    description:
+      "A cross-platform system with mobile and web versions that enables farmers to submit claim evidence for rice insurance. Features include crop disease detection, diagnosis, and personalized recommendations for treatment and prevention to support better farm management.",
+      img: "InsuredRiceScan.png",
+    link: "https://github.com/ejie/InsuredRiceScan",
+  },
+
 ];
