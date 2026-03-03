@@ -1,5 +1,12 @@
 export const projects = [
   {
+    title: "Yakap",
+    description:
+      "A multi-role appointment booking system connecting users with healthcare providers. Features three user types: clients who can book appointments with doctors, providers who manage their schedules and services, and administrators with comprehensive platform oversight. Streamlines the process of finding and accessing mental health or wellness support services.",
+      img: "Yakap.png",
+    link: "https://github.com/ejie/YakapApp",
+  },
+  {
     title: "Bohol InstaRecipe",
     description:
       "A mobile meal-planning app that highlights traditional Boholano cuisine with step-by-step recipes and local food culture.",
@@ -27,5 +34,4 @@ export const projects = [
       img: "InsuredRiceScan.png",
     link: "https://github.com/ejie/InsuredRiceScan",
   },
-
 ];
