@@ -88,5 +88,4 @@ function CertificateCard({ certificate }: { certificate: Certificate }) {
     </motion.div>
   );
 }
-
 export default CertificateCard;

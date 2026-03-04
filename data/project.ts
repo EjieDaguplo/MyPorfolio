@@ -1,5 +1,12 @@
 export const projects = [
   {
+    title: "InsuredRiceScan",
+    description:
+      "A cross-platform system with mobile and web versions that enables farmers to submit claim evidence for rice insurance. Features include crop disease detection, diagnosis, and personalized recommendations for treatment and prevention to support better farm management.",
+      img: "InsuredRiceScan.png",
+    link: "https://github.com/ejie/InsuredRiceScan",
+  },
+  {
     title: "Yakap",
     description:
       "A multi-role appointment booking system connecting users with healthcare providers. Features three user types: clients who can book appointments with doctors, providers who manage their schedules and services, and administrators with comprehensive platform oversight. Streamlines the process of finding and accessing mental health or wellness support services.",
