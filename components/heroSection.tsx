@@ -165,7 +165,7 @@ function HeroSection() {
             variants={fadeUp}
             className="flex flex-wrap gap-2 mt-8 justify-center md:justify-start"
           >
-            {["React", "Next.js", "TypeScript", "Flutter", "Python"].map((tech, i) => (
+            {["React", "Next.js", "TypeScript", "Kotlin", "Python", "C programming", "JavaScript", "Machine Learning", "Express JS"].map((tech, i) => (
               <motion.span
                 key={tech}
                 initial={{ opacity: 0, scale: 0.8 }}
