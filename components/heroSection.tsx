@@ -46,18 +46,27 @@ function HeroSection() {
         />
         <motion.div
           animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.2, 0.1] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
           className="absolute -bottom-32 -right-32 w-96 h-96 bg-pink-500 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ scale: [1, 1.15, 1], opacity: [0.1, 0.18, 0.1] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-purple-500 rounded-full blur-3xl"
         />
       </div>
 
-      <div className="relative max-w-5xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
-
+      <div className="relative max-w-5xl w-full flex flex-col md:flex-row items-center justify-between gap-12 mt-20">
         {/* Left - Photo */}
         <motion.div
           variants={fadeLeft}
@@ -75,7 +84,11 @@ function HeroSection() {
             {/* Pulse ring */}
             <motion.div
               animate={{ scale: [1, 1.08, 1], opacity: [0.4, 0.7, 0.4] }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
               className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400 to-pink-400 opacity-40 scale-110"
             />
             {/* Image */}
@@ -165,7 +178,17 @@ function HeroSection() {
             variants={fadeUp}
             className="flex flex-wrap gap-2 mt-8 justify-center md:justify-start"
           >
-            {["React", "Next.js", "TypeScript", "Kotlin", "Python", "C programming", "JavaScript", "Machine Learning", "Express JS"].map((tech, i) => (
+            {[
+              "React",
+              "Next.js",
+              "TypeScript",
+              "Kotlin",
+              "Python",
+              "C programming",
+              "JavaScript",
+              "Machine Learning",
+              "Express JS",
+            ].map((tech, i) => (
               <motion.span
                 key={tech}
                 initial={{ opacity: 0, scale: 0.8 }}

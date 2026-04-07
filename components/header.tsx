@@ -11,11 +11,11 @@ function Header() {
     "relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-white after:transition-all after:duration-300 hover:after:w-full";
 
   return (
-    <header className="flex justify-between items-center py-6 px-4 bg-gray-900 text-white relative">
+    <header className="flex justify-between items-center py-6 px-4 bg-gray-900 text-white fixed w-full z-50">
       {/* Left side - Logo + Photo on md+ */}
-      <div className="flex items-center gap-3 ml-4">
+      <div className="flex items-center gap-4">
         {/* Photo - only visible on md and above */}
-        <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30 shrink-0">
+        {/* <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white/30 shrink-0">
           <Image
             src="/MyFace.jpg"
             alt="Profile"
@@ -23,9 +23,14 @@ function Header() {
             height={40}
             className="object-cover w-full h-full"
           />
-        </div>
+        </div> */}
 
-        <h1 className="text-2xl font-bold animate-bounce">EOD</h1>
+        <h1 className="text-2xl font-extrabold leading-tight md:hidden ml-6">
+          Ejie O. Daguplo
+        </h1>
+        <h1 className="md:block md:text-2xl hidden ml-6 font-extrabold leading-tight">
+          Ejie O. Daguplo
+        </h1>
       </div>
 
       {/* Desktop Menu */}
@@ -60,16 +65,32 @@ function Header() {
              mt-2 p-4 rounded-2xl shadow-lg 
              flex flex-col space-y-4 md:hidden z-50 items-center"
         >
-          <Link href="#hero" className={navLinkClass} onClick={() => setIsOpen(false)}>
+          <Link
+            href="#hero"
+            className={navLinkClass}
+            onClick={() => setIsOpen(false)}
+          >
             Home
           </Link>
-          <Link href="#projects" className={navLinkClass} onClick={() => setIsOpen(false)}>
+          <Link
+            href="#projects"
+            className={navLinkClass}
+            onClick={() => setIsOpen(false)}
+          >
             Projects
           </Link>
-          <a href="#certificate" className={navLinkClass} onClick={() => setIsOpen(false)}>
+          <a
+            href="#certificate"
+            className={navLinkClass}
+            onClick={() => setIsOpen(false)}
+          >
             Certificate
           </a>
-          <Link href="#contact" className={navLinkClass} onClick={() => setIsOpen(false)}>
+          <Link
+            href="#contact"
+            className={navLinkClass}
+            onClick={() => setIsOpen(false)}
+          >
             Contact
           </Link>
         </div>

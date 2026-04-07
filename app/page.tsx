@@ -1,5 +1,6 @@
 import CertificateCard from "@/components/certificateCard";
 import Footer from "@/components/footer";
+import GeminiChat from "@/components/geminiChat";
 import Header from "@/components/header";
 import HeroSection from "@/components/heroSection";
 import ProjectCards from "@/components/projectCards";
@@ -43,6 +44,10 @@ export default function Home() {
         </div>
       </section>
       <Footer />
+      <div className="flex flex-col items-center text-center gap-6 mt-12">
+        <h1 className="text-2xl text-white">Ask Me About Ejie</h1>
+        <GeminiChat />
+      </div>
     </>
   );
 }
