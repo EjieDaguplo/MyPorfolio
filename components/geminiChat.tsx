@@ -134,8 +134,8 @@ Mobile Applications:
   };
   // Add this at the top of your component, after the other useState hooks
   const messages_cycle = [
-    "Want to know more? 🤔",
-    "Ask me about Ejie 👋",
+    "Hi, I'm Ejie's AI assistant 👋",
+    "Ask me more about Ejie 🤔",
     "Feel free to ask me! 😊",
   ];
   const [cycleIndex, setCycleIndex] = useState(0);
