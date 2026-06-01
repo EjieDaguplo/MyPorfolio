@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
@@ -44,31 +45,35 @@ function CertificateCard({ certificate }: { certificate: Certificate }) {
     >
       {/* Image */}
       <div className="relative w-full h-48 overflow-hidden">
-        <motion.img
-          src={certificate.img}
-          alt={certificate.title}
-          className="w-full h-full object-cover"
+        <motion.div
+          className="relative w-full h-full"
           whileHover={{ scale: 1.08 }}
           transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-        />
+        >
+          <Image
+            src={certificate.img}
+            alt={certificate.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+        </motion.div>
+
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60 pointer-events-none" />
 
         {/* Shimmer effect on hover */}
         <motion.div
           initial={{ x: "-100%", opacity: 0 }}
           whileHover={{ x: "100%", opacity: 0.15 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent skew-x-12"
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent skew-x-12 pointer-events-none"
         />
       </div>
 
-      {/* Content */}
+      {/* Content — no second whileInView, inherits from parent */}
       <motion.div
         variants={contentVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
         className="p-4 flex flex-col gap-2"
       >
         <motion.span
@@ -88,4 +93,5 @@ function CertificateCard({ certificate }: { certificate: Certificate }) {
     </motion.div>
   );
 }
+
 export default CertificateCard;

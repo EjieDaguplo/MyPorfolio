@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CertificateCard from "@/components/certificateCard";
 import Footer from "@/components/footer";
 import GeminiChat from "@/components/geminiChat";
@@ -12,6 +13,7 @@ export default function Home() {
     <>
       <Header />
       <HeroSection />
+
       <section id="projects" className="py-12 px-6 bg-gray-800">
         <h2 className="text-3xl font-bold mb-6 text-white">Projects</h2>
         <div className="grid md:grid-cols-3 gap-6">
@@ -20,6 +22,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+
       <section
         id="certificate"
         className="py-12 px-6 bg-gray-800 mt-4 text-white"
@@ -33,23 +36,26 @@ export default function Home() {
                 cert.img === "ojt.jpg" ? "basis-full flex justify-center" : ""
               }`}
             >
-              <img
-                src={`${cert.img}`}
-                alt={cert.title}
-                className="w-64 rounded-lg shadow-md"
-              />
+              <div className="relative w-64 h-44 rounded-lg overflow-hidden shadow-md">
+                <Image
+                  src={cert.img}
+                  alt={cert.title}
+                  fill
+                  className="object-cover"
+                  sizes="256px"
+                />
+              </div>
               <p className="mt-2 text-center text-sm">{cert.title}</p>
             </div>
           ))}
         </div>
       </section>
+
       <Footer />
+
       <div className="flex flex-col items-center text-center gap-6 mt-12">
-        <h1 className="text-2xl text-white">Ask Me About Ejie</h1>
         <GeminiChat />
       </div>
     </>
   );
 }
-//To allow npm to read
-// Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass

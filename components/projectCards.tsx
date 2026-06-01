@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
@@ -46,31 +47,35 @@ function ProjectCards({ projects }: { projects: Project }) {
     >
       {/* Image */}
       <div className="relative w-full h-48 overflow-hidden">
-        <motion.img
-          src={projects.img}
-          alt={projects.title}
-          className="w-full h-full object-cover"
+        <motion.div
+          className="relative w-full h-full"
           whileHover={{ scale: 1.08 }}
           transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-        />
+        >
+          <Image
+            src={projects.img}
+            alt={projects.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+        </motion.div>
+
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60 pointer-events-none" />
 
         {/* Shimmer effect on hover */}
         <motion.div
           initial={{ x: "-100%", opacity: 0 }}
           whileHover={{ x: "100%", opacity: 0.15 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent skew-x-12"
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent skew-x-12 pointer-events-none"
         />
       </div>
 
-      {/* Content */}
+      {/* Content — no second whileInView, inherits from parent */}
       <motion.div
         variants={contentVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
         className="p-5 flex flex-col gap-3"
       >
         <motion.span
@@ -98,6 +103,7 @@ function ProjectCards({ projects }: { projects: Project }) {
           variants={itemVariants}
           href={projects.link}
           target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="mt-1 w-fit px-5 py-2 rounded-xl text-sm font-semibold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:opacity-90 transition-opacity shadow-md shadow-purple-500/20 text-white"

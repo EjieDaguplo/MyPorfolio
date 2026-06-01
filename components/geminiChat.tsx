@@ -191,7 +191,7 @@ Mobile Applications:
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-50 w-80 sm:w-96 bg-gray-900 border border-white/10 rounded-2xl shadow-2xl shadow-purple-500/20 flex flex-col overflow-hidden">
+        <div className="fixed bottom-24 right-6 z-50 w-80 sm:w-96 h-[24rem] bg-gray-900 border border-white/10 rounded-2xl shadow-2xl shadow-purple-500/20 flex flex-col overflow-hidden">
           {/* Header */}
           <div className="flex items-center gap-3 px-4 py-3 bg-gray-800 border-b border-white/10">
             <div className="w-8 h-8 rounded-full overflow-hidden border border-purple-400/50">
@@ -221,7 +221,7 @@ Mobile Applications:
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3 max-h-[50rem]">
+          <div className="h-80 overflow-y-auto p-4 space-y-3">
             {messages.map((msg, i) => (
               <div
                 key={i}
